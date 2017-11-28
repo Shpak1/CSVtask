@@ -1,5 +1,5 @@
 import React, { PureComponent  } from 'react';
-import './style/App.css';
+import './style/Table.css';
 
 class Table extends PureComponent  {
 
@@ -12,6 +12,7 @@ class Table extends PureComponent  {
     }
 
      _sortTable(index, body, sort) {
+         console.log(sort)
         let sortingData = [];// define store for data colums
          let newBody = []; // define the final array body
          let findItem, exist; // tempory object for store values
@@ -27,8 +28,9 @@ class Table extends PureComponent  {
          sortingData.map(val=> {
              body.map((value, i)=>{
                  findItem =  value.find(()=>val == value[index]);
-                 exist = newBody.some(()=>newBody[i] === value); // check if the value exist in array
-                 if (findItem && !exist){
+                 let temp = newBody.indexOf(value);
+                 console.log(temp)
+                 if (findItem && temp ===-1){
                      newBody.push(value)
                  }
              })
@@ -46,22 +48,28 @@ class Table extends PureComponent  {
         let {header} = this.props;
         let body = this.state.newBody;
         return (
-            <table id="myTable">
-                <thead>
-                    {header && header.map((val,i)=>(
-                        <th key = {i} onClick={()=>this._sortTable(i, body, this.sort)}>{val}</th>
-                    ))}
-                </thead>
-                <tbody>
-                {body && body.map((val,i)=> (
-                    <tr key = {i}>
-                        {
-                            val.map((value, index)=> (
-                                <td key={index}>{value}</td>))
-                        }
-            </tr>))}
-                </tbody>
-            </table>
+            <div className="mainTableFrame">
+                <div className="tableSpan">Table</div>
+                <div className="descriptionSpan">Your data will be apiar hire</div>
+                    <table className="Table">
+                        <thead>
+                        <tr className="headerTable">
+                            {header && header.map((val,i)=>(
+                                <td key = {i} onClick={()=>this._sortTable(i, body, this.sort)}>{val}</td>
+                            ))}
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {body && body.map((val,i)=> (
+                            <tr key = {i}>
+                                {
+                                    val.map((value, index)=> (
+                                        <td key={index}>{value}</td>))
+                                }
+                    </tr>))}
+                        </tbody>
+                    </table>
+                </div>
         );
     }
 }

@@ -1,0 +1,38 @@
+.mainTableFrame{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: 7%;
+}
+.tableSpan{
+    padding-top: 5%;
+    font-family: Noto Sans;
+    font-weight: bold;
+    padding-bottom: 16px;
+    font-size: 48px;
+    color: #78909C;
+}
+.descriptionSpan{
+    font-weight: bold;
+    padding-bottom: 16px;
+    font-size: 24px;
+    font-family:  Noto Sans;
+    color: #78909C;
+}
+.Table{
+    max-width: 90%;
+    border-collapse: collapse;
+    width: 100%;
+    margin-right: 6%;
+}
+.Table th, td {
+    font-family:  Noto Sans;
+    padding: 8px;
+    text-align: center;
+    border-bottom: 1px solid #263238;
+    color: #263238;
+    font-size: 16px;
+}
+.headerTable{
+    font-weight: bold;
+}
