@@ -1,5 +1,7 @@
 import React, { PureComponent  } from 'react';
 import './style/Table.css';
+import {connect} from 'react-redux'
+
 
 class Table extends PureComponent  {
 
@@ -12,7 +14,6 @@ class Table extends PureComponent  {
     }
 
      _sortTable(index, body, sort) {
-         console.log(sort)
         let sortingData = [];// define store for data colums
          let newBody = []; // define the final array body
          let findItem, exist; // tempory object for store values
@@ -28,29 +29,24 @@ class Table extends PureComponent  {
          sortingData.map(val=> {
              body.map((value, i)=>{
                  findItem =  value.find(()=>val == value[index]);
-                 let temp = newBody.indexOf(value);
-                 console.log(temp)
-                 if (findItem && temp ===-1){
+                  exist = newBody.indexOf(value);
+                 if (findItem && exist ===-1){
                      newBody.push(value)
                  }
              })
 
          });
          this.sort = this.sort === 'incr' ? 'decr' : 'incr';// 'incr' mean sort from big to small , 'decr' from small to big
-         console.log(newBody)
          this.setState({newBody:newBody});
-    }
-    componentWillReceiveProps(nextProps){
-        this.setState({newBody:nextProps.body})
     }
 
     render() {
-        let {header} = this.props;
-        let body = this.state.newBody;
+        let header = this.props.dataForTable.header;
+        let body = this.props.dataForTable.body;
         return (
             <div className="mainTableFrame">
                 <div className="tableSpan">Table</div>
-                <div className="descriptionSpan">Your data will be apiar hire</div>
+                <div className="descriptionSpan">Your data will be appear hire</div>
                     <table className="Table">
                         <thead>
                         <tr className="headerTable">
@@ -73,5 +69,8 @@ class Table extends PureComponent  {
         );
     }
 }
+const mapStateToProps = ({ dataForTable }) =>({
+    dataForTable
+});
 
-export default Table;
+export default connect (mapStateToProps, null) (Table);

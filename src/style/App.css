@@ -1,6 +1,6 @@
 .renderMainDiv {
   width: 50%;
-  height:-webkit-fill-available;
+  height:-webkit-stretch,;
   background-color: #263036;
 }
 .headerSpan{
