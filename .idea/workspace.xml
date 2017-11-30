@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="85df2cf4-7722-4625-90cc-b7760b47da5e" name="Default" comment="some refactor, fix markup bugs, fix bug with sort items">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Test/helper.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Test/reducers/reducers.test.js" />
+    <list default="true" id="85df2cf4-7722-4625-90cc-b7760b47da5e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Test/App.test.js" afterPath="$PROJECT_DIR$/src/Test/App.test.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="agile_engine.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -50,11 +48,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Table.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Table.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/style/Table.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="17">
               <caret line="1" column="23" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -129,7 +137,6 @@
         <option value="$PROJECT_DIR$/src/lib/store.js" />
         <option value="$PROJECT_DIR$/src/reducers/combine.js" />
         <option value="$PROJECT_DIR$/src/index.js" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/style/App.css" />
         <option value="$PROJECT_DIR$/src/actions/actionTypes.js" />
         <option value="$PROJECT_DIR$/src/reducers/index.js" />
@@ -144,6 +151,7 @@
         <option value="$PROJECT_DIR$/src/Test/reducers/reducers.test.js" />
         <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/style/Table.css" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -413,7 +421,7 @@
       <workItem from="1511894293434" duration="8494000" />
       <workItem from="1511955229442" duration="9546000" />
       <workItem from="1511966859239" duration="9197000" />
-      <workItem from="1511978481268" duration="20692000" />
+      <workItem from="1511978481268" duration="21412000" />
     </task>
     <task id="LOCAL-00001" summary="new git ignore">
       <created>1511894344354</created>
@@ -443,11 +451,18 @@
       <option name="project" value="LOCAL" />
       <updated>1512002355464</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="add some test">
+      <created>1512024779227</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1512024779227</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="111577000" />
+    <option name="totallyTimeSpent" value="112297000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -488,7 +503,8 @@
     <MESSAGE value="table style and fix bug sorting" />
     <MESSAGE value="redux saga" />
     <MESSAGE value="some refactor, fix markup bugs, fix bug with sort items" />
-    <option name="LAST_COMMIT_MESSAGE" value="some refactor, fix markup bugs, fix bug with sort items" />
+    <MESSAGE value="add some test" />
+    <option name="LAST_COMMIT_MESSAGE" value="add some test" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -737,14 +753,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/favicon.ico">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -920,6 +928,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="23" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
           <folding />
         </state>
       </provider>
