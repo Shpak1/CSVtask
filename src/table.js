@@ -9,9 +9,6 @@ class Table extends PureComponent  {
     constructor(props) {
         super(props);
         this.sort = 'incr';
-        this.state = {
-            newBody:[]
-        }
     }
 
      _sortTable(index, body, sort) {

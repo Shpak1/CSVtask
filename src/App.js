@@ -119,32 +119,32 @@ class App extends Component {
   render() {
     return (
         <div>
-      <div className="renderMainDiv">
-          <div className="headerSpan">
-              <span>Test task for AgileEngine</span>
-          </div>
-          <div className="subtitleSpan">
-              <span>Use ',' for delimiter, or you can specify your own on App.js(25)</span>
-          </div>
-          <div className="wrapper">
-                  <textarea className='textareaTable'
-                            wrap ='off'
-                            rows={this._calculateRows()}
-                            onChange={this.handleChange}
-                            value={this.state.value}
-                            onFocus={()=>this._borderControl()}
-                            onBlur={()=>this._borderControlBlur()}
-                            placeholder = 'Place your CSV here'>
-                  </textarea>
-              <div className={this.state.focus ? 'controlFocus' :"controls"}>
-                  <button className="buttonStyle" disabled={!this.state.value} onClick={()=>this._onClick()}>
-                      <img alt="" src={renderIcon}/>
-                  </button>
+              <div className="renderMainDiv">
+                  <div className="headerSpan">
+                      <span>Test task for AgileEngine</span>
+                  </div>
+                  <div className="subtitleSpan">
+                      <span>Use ',' for delimiter, or you can specify your own on App.js(25)</span>
+                  </div>
+                  <div className="wrapper">
+                          <textarea className='textareaTable'
+                                    wrap ='off'
+                                    rows={this._calculateRows()}
+                                    onChange={this.handleChange}
+                                    value={this.state.value}
+                                    onFocus={()=>this._borderControl()}
+                                    onBlur={()=>this._borderControlBlur()}
+                                    placeholder = 'Place your CSV here'>
+                          </textarea>
+                      <div className={this.state.focus ? 'controlFocus' :"controls"}>
+                          <button className="buttonStyle" disabled={!this.state.value} onClick={()=>this._onClick()}>
+                              <img alt="" src={renderIcon}/>
+                          </button>
+                      </div>
+                  </div>
               </div>
-          </div>
-      </div>
             <Table/>
-            </div>
+        </div>
     );
   }
 }
