@@ -1,6 +1,7 @@
 import React, { PureComponent  } from 'react';
 import './style/Table.css';
 import {connect} from 'react-redux'
+import {tableData} from'./actions/tableData'
 
 
 class Table extends PureComponent  {
@@ -21,23 +22,26 @@ class Table extends PureComponent  {
          body.map((val)=> {
             sortingData.push(val[index]);
         });
+
          if(sort === 'incr'){
              sortingData.sort();
          } else {
-             sortingData.sort()
+             sortingData.sort();
+             sortingData.reverse()
          }
-         sortingData.map(val=> {
-             body.map((value, i)=>{
-                 findItem =  value.find(()=>val == value[index]);
+
+         sortingData.map(val => {
+             body.map((value) => {
+                 findItem =  value.find(() => val == value[index]);
                   exist = newBody.indexOf(value);
-                 if (findItem && exist ===-1){
+                 if (findItem && exist === -1){
                      newBody.push(value)
                  }
              })
-
          });
+
          this.sort = this.sort === 'incr' ? 'decr' : 'incr';// 'incr' mean sort from big to small , 'decr' from small to big
-         this.setState({newBody:newBody});
+         this.props.tableData(this.props.dataForTable.header, newBody)
     }
 
     render() {
@@ -69,8 +73,13 @@ class Table extends PureComponent  {
         );
     }
 }
+
 const mapStateToProps = ({ dataForTable }) =>({
     dataForTable
 });
 
-export default connect (mapStateToProps, null) (Table);
+const action = {
+    tableData
+};
+
+export default connect (mapStateToProps, action) (Table);

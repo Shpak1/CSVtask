@@ -1,29 +1,27 @@
 .mainTableFrame{
     position: absolute;
-    top: 0;
+    top: 5.1%;
     left: 50%;
-    margin-left: 7%;
+    margin-left: 5%;
 }
 .tableSpan{
-    padding-top: 5%;
     font-family: Noto Sans;
     font-weight: bold;
     padding-bottom: 16px;
-    font-size: 48px;
+    font-size: 40px;
     color: #78909C;
 }
 .descriptionSpan{
     font-weight: bold;
-    padding-bottom: 16px;
-    font-size: 24px;
+    padding-bottom: 13px;
+    font-size: 20px;
     font-family:  Noto Sans;
     color: #78909C;
 }
 .Table{
-    max-width: 90%;
+    max-width: 89%;
     border-collapse: collapse;
     width: 100%;
-    margin-right: 6%;
 }
 .Table th, td {
     font-family:  Noto Sans;

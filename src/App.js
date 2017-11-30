@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './style/App.css';
 import Table from './table'
-import renderIcon from './Recources/render.svg'
+import renderIcon from './Resources/render.svg'
 import {connect} from 'react-redux'
 import {tableData} from'./actions/tableData'
 
@@ -9,13 +9,10 @@ class App extends Component {
 
     constructor(props){
         super(props);
-        this.body={};
         this.state = {
             focus:false,
             value:'',
-            header:[],
-            tableBody:[]
-        }
+        };
         this.handleChange = this._handleChange.bind(this)    }
 
     _handleChange(e){
@@ -25,7 +22,7 @@ class App extends Component {
     _onClick(){
         // Check to see if the delimiter is defined. If not,
         // then default to comma.
-        if(this.state.value === '') return
+        if(this.state.value === '') return;
         let strData = this.state.value;
         let strDelimiter = ',';
 
@@ -50,7 +47,7 @@ class App extends Component {
 
         // Create an array to hold our individual pattern
         // matching groups.
-        let arrMatches = null;
+        let arrMatches;
 
         // Keep looping over the regular expression matches
         // until we can no longer find a match.
@@ -86,15 +83,11 @@ class App extends Component {
                     new RegExp( "\"\"", "g" ),
                     "\""
                 );
-
             } else {
-
                 // We found a non-quoted value.
                 strMatchedValue = arrMatches[ 3 ];
 
             }
-
-
             // Now that we have our value string, let's add
             // it to the data array.
             if(strMatchedValue){
@@ -104,14 +97,13 @@ class App extends Component {
             }
         }
 
-        // Return the parsed data.
-        this.body = arrData.splice(1);
-        this.props.tableData(arrData[0], this.body)
+        let body = arrData.splice(1);
+        this.props.tableData(arrData[0], body)
     }
     _calculateRows(){ //for dynamic resize textarea
         let rows;
         if(this.state.value) {
-            let data = this.state.value
+            let data = this.state.value;
             rows = data.split(/\r?\n|\r/);
             return rows.length
         }
@@ -126,6 +118,7 @@ class App extends Component {
 
   render() {
     return (
+        <div>
       <div className="renderMainDiv">
           <div className="headerSpan">
               <span>Test task for AgileEngine</span>
@@ -141,7 +134,7 @@ class App extends Component {
                             value={this.state.value}
                             onFocus={()=>this._borderControl()}
                             onBlur={()=>this._borderControlBlur()}
-                            placeholder = 'place your CSV here'>
+                            placeholder = 'Place your CSV here'>
                   </textarea>
               <div className={this.state.focus ? 'controlFocus' :"controls"}>
                   <button className="buttonStyle" disabled={!this.state.value} onClick={()=>this._onClick()}>
@@ -149,14 +142,14 @@ class App extends Component {
                   </button>
               </div>
           </div>
-          <Table
-          />
       </div>
+            <Table/>
+            </div>
     );
   }
 }
 const action = {
     tableData
-}
+};
 
 export default connect (null,action) (App);

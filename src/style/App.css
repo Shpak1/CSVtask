@@ -1,6 +1,6 @@
 .renderMainDiv {
   width: 50%;
-  height:-webkit-stretch,;
+  height:-webkit-fill-available;
   background-color: #263036;
 }
 .headerSpan{
@@ -8,16 +8,16 @@
   font-family:  Noto Sans;
   font-weight: bold;
   padding-bottom: 16px;
-  font-size: 48px;
+  font-size: 40px;
   margin-left: 10%;
   color: #78909C;
 }
 .subtitleSpan{
   font-weight: bold;
   padding-bottom: 16px;
-  font-size: 24px;
+  font-size: 20px;
   font-family:  Noto Sans;
-  margin-left: 5%;
+  margin-left: 10%;
   color: #78909C;
 }
 .wrapper{
@@ -34,7 +34,8 @@
   padding-top:10px;
   padding-left: 10px;
   background: #ffffff;
-  border:none;
+  border: 2px solid transparent;
+  border-bottom: 0;
   width:100%;
   overflow: hidden;
   min-height: 250px;
@@ -49,6 +50,18 @@
   border: 2px solid yellow;
   border-bottom: 0;
 }
+.wrapper textarea:focus::-webkit-input-placeholder{
+  color: transparent;
+}
+.wrapper textarea:focus::-moz-placeholder{
+  color: transparent;
+}
+.wrapper textarea:focus:-moz-placeholder {
+  color: transparent;
+}
+.wrapper textarea:focus:-ms-input-placeholder {
+  color: transparent;
+}
 .controlFocus{
   margin-right: 1px;
   margin-bottom: 1px;
@@ -56,7 +69,7 @@
   background: #ffffff;
   margin-top: -6px;
   height: 50px;
-  border: 1px solid yellow;
+  border: 2px solid yellow;
   border-top: 0;
 }
 .controls{
@@ -66,6 +79,8 @@
   background: #ffffff;
   margin-top: -6px;
   height: 50px;
+  border: 2px solid transparent;
+  border-top: 0;
 }
 .buttonStyle{
   background: #FFEB3B;
